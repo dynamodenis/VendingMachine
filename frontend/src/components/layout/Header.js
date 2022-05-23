@@ -9,9 +9,16 @@ class Header extends Component {
         const authLinks = (
             
             <ul className="navbar-nav mr-auto">
-                <button className="btn btn-primary mr-2 btn-sm">
-                    <Link to="/maintainance" className="nav-link">Maintainance</Link> 
-                </button>
+                <li className="nav-item">
+                    <button className="btn btn-primary mr-2 btn-sm">
+                        <Link to="/maintainance" className="nav-link">Products Maintainance</Link> 
+                    </button>
+                </li>
+                <li className="nav-item">
+                    <button className="btn btn-primary mr-2 btn-sm">
+                        <Link to="/coins-maintainance" className="nav-link">Coins Maintainance</Link> 
+                    </button>
+                </li>
             </ul>
         )
         return (

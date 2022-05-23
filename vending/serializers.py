@@ -19,3 +19,8 @@ class ProductsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Products
         fields = '__all__'
+
+class CoinsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Coins
+        fields = '__all__'

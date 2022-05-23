@@ -69,7 +69,6 @@ function EditProduct(props) {
                   <option value="" disabled>
                     Select Coin Type
                   </option>
-                  <option value="PENNY">Pennies</option>
                   <option value="CENTS">Cents</option>
                   <option value="KSH">Shillings</option>
                 </select>

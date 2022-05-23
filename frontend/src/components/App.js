@@ -10,11 +10,12 @@ import Header from './layout/Header'
 import Dashboard from './leads/Dashboard'
 import Alert from './layout/Alert'
 import Maintainance from './leads/Maintainance';
+import CoinMaintainance from './leads/coins-maintainance/CoinMaintainance';
 
 // react-alert tempalates settings
 const options = {
     timeout: 3000,
-    position: positions.TOP_CENTER,
+    position: positions.TOP_RIGHT,
     
   };
   
@@ -33,6 +34,7 @@ class App extends Component {
                             <Switch>
                                 <Route exact path="/" component={Dashboard}/>
                                 <Route exact path="/maintainance" component={Maintainance}/>
+                                <Route exact path="/coins-maintainance" component={CoinMaintainance}/>
                             </Switch>
                         </div>
                         </Fragment>

@@ -1,17 +1,24 @@
-import {GET_PRODUCTS, DELETE_LEAD, ADD_PRODUCT,EDIT_PRODUCT} from '../actions/types'
+import {GET_PRODUCTS, DELETE_LEAD, ADD_PRODUCT,EDIT_PRODUCT,GET_COINS,EDIT_COIN,BUY_PRODUCT} from '../actions/types'
 
 const initialState = {
-    products:[]
+    products:[],
+    coins:[]
 }
 
 export default function(state = initialState, action){
     switch(action.type){
         case GET_PRODUCTS:
-            console.log(action.payload.data)
             return {
                 ...state,
                 products: action.payload.data
             };
+        case GET_COINS:
+            console.log(action.payload.data)
+            return {
+                ...state,
+                coins: action.payload.data
+            };
+
 
         // delete product on the UI
         case DELETE_LEAD:
@@ -26,15 +33,25 @@ export default function(state = initialState, action){
                 products:[...state.products, action.payload.data]
             } 
         // Edit product
+        case BUY_PRODUCT:
         case EDIT_PRODUCT:
-            console.log("payload ",action.payload.data)
             const index = state.products.findIndex(el => el.id === action.payload.data.id);
             const newArray = [...state.products]; 
             newArray[index] = action.payload.data;
             return{
                 ...state,
                 products:newArray,
-                isUpdating:false,
+                
+            }
+        // Edit coin
+        case EDIT_COIN:
+            const coinsindex = state.coins.findIndex(el => el.id === action.payload.data.id);
+            const coinsnewArray = [...state.coins]; 
+            coinsnewArray[coinsindex] = action.payload.data;
+            return{
+                ...state,
+                coins:coinsnewArray,
+                
             }
         default:
             return state

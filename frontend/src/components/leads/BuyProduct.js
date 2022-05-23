@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { updateProduct } from "../../actions/leads";
+import { buyProduct } from "../../actions/leads";
 
 function BuyProduct(props) {
-  const { selected, updateProduct } = props;
+  const { selected, buyProduct } = props;
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
@@ -53,9 +53,9 @@ function BuyProduct(props) {
   // on submit
   const onSubmit = e => {
     e.preventDefault();
-    const product = { id, name, coins };
+    const product = { id, name,number, coins };
     console.log(product);
-    // updateProduct(product);
+    buyProduct(product);
   };
   return (
     <div className="modal fade" id="buyModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -92,7 +92,6 @@ function BuyProduct(props) {
                           <option value="" disabled>
                             Select Coin Type
                           </option>
-                          <option value="PENNY">Pennies</option>
                           <option value="CENTS">Cents</option>
                           <option value="KSH">Shillings</option>
                         </select>
@@ -125,4 +124,4 @@ function BuyProduct(props) {
   );
 }
 
-export default connect(null, { updateProduct })(BuyProduct);
+export default connect(null, { buyProduct })(BuyProduct);

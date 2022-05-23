@@ -46,7 +46,6 @@ class Form extends Component {
                         <label>Coin Type</label><br/>
                         <select className="form-group" name="coin_type" id="" onChange={this.onChange} value={coin_type} required>
                             <option value="" disabled>Select Coin Type</option>
-                            <option value="PENNY">Pennies</option>
                             <option value="CENTS">Cents</option>
                             <option value="KSH">Shillings</option>
                         </select>

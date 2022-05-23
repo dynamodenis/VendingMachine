@@ -14,8 +14,7 @@ class Lead(models.Model):
 
 class Products(models.Model):
     COIN_TYPES = (
-        ('COIN', 'Coins'),
-        ('PENNY', 'Pennies'),
+        ('CENTS', 'Cents'),
         ('KSH', 'Kenya Shillings'),
     )
     name = models.CharField(max_length=100)
@@ -29,8 +28,7 @@ class Products(models.Model):
     
 class Coins(models.Model):
     COIN_TYPES = (
-        ('COIN', 'Coins'),
-        ('PENNY', 'Pennies'),
+        ('CENTS', 'Cents'),
         ('KSH', 'Kenya Shillings'),
     )
 

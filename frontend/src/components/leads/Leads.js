@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { getProducts, deleteLead } from '../../actions/leads'
-import leads from '../../reducers/leads'
 import EditProduct from './EditProduct'
 import BuyProduct from './BuyProduct'
 
